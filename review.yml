@@ -1,0 +1,88 @@
+aid: getcalfresh
+name: GetCalFresh
+review:
+  question: Does GetCalFresh expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. GetCalFresh does not publish any
+    documented public API surface at all - REST, WebSocket, SSE, or
+    otherwise - so there is no server-push transport to model. GetCalFresh
+    is an end-user guidance website operated by Code for America; it is not
+    an API product.
+findings:
+  summary: |
+    GetCalFresh does not publish a documented public API of any kind,
+    WebSocket or otherwise. GetCalFresh.org is now an informational and
+    referral service delivered by Code for America on behalf of the State
+    of California. Its own About page states applicants "can't apply for
+    CalFresh on this website" and directs them to BenefitsCal.com, the
+    state's official application portal built on CalSAWS (California
+    Statewide Automated Welfare System), which all 58 counties use for
+    eligibility and case management as of October 2023. GetCalFresh does
+    not process applications, determine eligibility, or access case
+    information, and no developer portal, API reference, or SDK exists for
+    it. Historically, before BenefitsCal, Code for America's own
+    documentation described the integration problem directly: "because a
+    standard set of APIs doesn't exist," the legacy GetCalFresh/`clean`
+    application tooling submitted CalFresh applications into county
+    systems using generated PDF forms delivered by fax and secure email -
+    not an API. No realtime, bidirectional, or streaming WebSocket
+    (ws:// or wss://) endpoint - or any REST endpoint - is documented
+    anywhere for GetCalFresh.
+  openSource: |
+    Code for America maintains GetCalFresh-related code in its public
+    GitHub organization (github.com/codeforamerica), including `clean`
+    (the original "Apply for CalFresh in SF" Rails application, archived
+    January 2024), `gcf-microsite`, and `calfresh-conversion-experiment`.
+    These are open-source application and research repositories, not an
+    API or client SDK, and none of them expose or document a public API
+    surface for third parties to integrate against.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented for GetCalFresh or the BenefitsCal/CalSAWS system it now refers applicants to.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere for GetCalFresh as of the review date.
+  endpointsConfirmedRest: []
+sources:
+  - url: https://www.getcalfresh.org/en/about/
+    type: Documentation
+    note: States applicants cannot apply on the site; refers to BenefitsCal.com; no API or developer resources mentioned.
+  - url: https://www.getcalfresh.org/en/
+    type: Website
+    note: GetCalFresh homepage, informational/guidance only.
+  - url: https://github.com/codeforamerica/clean
+    type: SourceCode
+    note: Archived Rails app, "Apply for CalFresh in SF"; generated PDF applications submitted via fax; no API documented.
+  - url: https://github.com/codeforamerica/gcf-microsite
+    type: SourceCode
+    note: Static microsite about CalFresh usage; no API surface.
+  - url: https://github.com/codeforamerica/calfresh-conversion-experiment
+    type: SourceCode
+    note: Small conversion-measurement app for legacy CalFresh application flows; no API surface.
+  - url: https://blog.sentry.io/sentry-for-good-code-for-america-and-digital-age-food-stamps/
+    type: Documentation
+    note: Describes GetCalFresh's technical approach - Selenium Webdriver, fax, and secure email to submit applications - explicitly because "a standard set of APIs doesn't exist" for county eligibility systems.
+  - url: https://codeforamerica.org/news/california-launches-code-for-americas-getcalfresh-in-all-58-counties/
+    type: Documentation
+    note: Background on GetCalFresh's statewide rollout under Code for America.
+  - url: https://cdss.ca.gov/inforesources/saws
+    type: Documentation
+    note: Confirms CalSAWS as the statewide eligibility system of record that BenefitsCal now runs on, replacing legacy county systems.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No API surface exists to model - REST, WebSocket, or otherwise.
+    GetCalFresh is a Code for America civic-tech guidance service, not an
+    API product, and the underlying benefits system it now refers
+    applicants to (BenefitsCal/CalSAWS) is not a documented public API
+    either. The apis.yml entry was created as an honest stub: apis: []
+    with no fabricated endpoints, OpenAPI, AsyncAPI, plans, rate limits, or
+    FinOps artifacts.

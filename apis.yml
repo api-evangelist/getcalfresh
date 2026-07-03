@@ -1,0 +1,34 @@
+aid: getcalfresh
+url: https://raw.githubusercontent.com/api-evangelist/getcalfresh/refs/heads/main/apis.yml
+name: GetCalFresh
+kind: nonprofit
+description: GetCalFresh is a service delivered by Code for America on behalf of
+  the people of California, providing plain-language guidance to help Californians
+  understand and navigate CalFresh (SNAP) food benefits. Since California's statewide
+  move to BenefitsCal.com on the CalSAWS platform, GetCalFresh.org no longer accepts
+  applications directly - it is an informational and guidance site that hands off
+  to BenefitsCal and county agencies for eligibility determination and case processing.
+  No public developer API is documented; historically, before BenefitsCal existed,
+  Code for America's application tooling submitted CalFresh applications to county
+  systems via generated PDF forms, fax, and secure email rather than a documented API.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Civic Tech
+- Nonprofit
+- Government
+- Public Benefits
+- SNAP
+- Food Assistance
+- California
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: GitHubOrganization
+  url: https://github.com/codeforamerica
+- type: Website
+  url: https://www.getcalfresh.org
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
