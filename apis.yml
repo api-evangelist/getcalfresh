@@ -25,6 +25,8 @@ modified: '2026-07-03'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/getcalfresh-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/codeforamerica
 - type: Website
