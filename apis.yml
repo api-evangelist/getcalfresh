@@ -11,6 +11,17 @@ description: GetCalFresh is a service delivered by Code for America on behalf of
   No public developer API is documented; historically, before BenefitsCal existed,
   Code for America's application tooling submitted CalFresh applications to county
   systems via generated PDF forms, fax, and secure email rather than a documented API.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
