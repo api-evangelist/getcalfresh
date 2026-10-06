@@ -51,10 +51,12 @@ tags_raw:
 - Food Assistance
 - California
 created: '2026-07-03'
-modified: '2026-07-03'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis: []
 common:
+- url: https://www.getcalfresh.org/en/updates/
+  type: Blog
 - type: DomainSecurity
   url: security/getcalfresh-domain-security.yml
 - type: GitHubOrganization
