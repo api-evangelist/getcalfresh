@@ -1,4 +1,4 @@
-# GetCalFresh (getcalfresh)
+# GetCalFresh
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,49 +66,79 @@
 
 GetCalFresh is a service delivered by Code for America on behalf of the people of California, providing plain-language guidance to help Californians understand and navigate CalFresh (SNAP) food benefits. Since California's statewide move to BenefitsCal.com on the CalSAWS platform, GetCalFresh.org no longer accepts applications directly - it is an informational and guidance site that hands off to BenefitsCal and county agencies for eligibility determination and case processing. No public developer API is documented; historically, before BenefitsCal existed, Code for America's application tooling submitted CalFresh applications to county systems via generated PDF forms, fax, and secure email rather than a documented API.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/getcalfresh/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/getcalfresh/refs/heads/main/apis.yml)
+**Areas:** Civic Tech · Non-Profit · Government · Public Benefits · SNAP · Food Assistance · California
 
-## Scope
+## GetCalFresh on APIs.io
 
-- **Type:** Nonprofit
-- **Position:** Consuming
-- **Access:** None Documented
+Everything profiled for GetCalFresh is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/getcalfresh/](https://apis.io/providers/getcalfresh/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Civic Tech
-- Nonprofit
-- Government
-- Public Benefits
-- SNAP
-- Food Assistance
-- California
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (1)
 
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
+Authentication, trust centre, and vulnerability disclosure.
 
-## Access Model
+- [Getcalfresh Domain Security](https://apis.io/security/getcalfresh/getcalfresh-domain-security/)
 
-GetCalFresh is an end-user public service, not an API product, and Code for America has not published a developer portal, API reference, or SDK for it. A few things are worth being precise about:
+## Where to find this API
 
-- **GetCalFresh.org today** is informational only. Its own About page states plainly: "You can't apply for CalFresh on this website." Applicants are directed to [BenefitsCal.com](https://benefitscal.com), the state's official application portal built on CalSAWS (California Statewide Automated Welfare System), which all 58 counties now use for eligibility and case management. GetCalFresh does not process applications, determine eligibility, or access case information.
-- **Historically**, before BenefitsCal existed, GetCalFresh (and its predecessor, the SF-focused `clean` app) collected applicant information through its own web form and then submitted it into county systems the only way available at the time - by generating a filled-out PDF application and delivering it via fax and secure email, because, in Code for America's own words, "a standard set of APIs doesn't exist" for county eligibility systems.
-- **Code for America's public GitHub org** ([github.com/codeforamerica](https://github.com/codeforamerica)) hosts the GetCalFresh-related repositories - `clean` (the original "Apply for CalFresh in SF" Rails app, now archived), `gcf-microsite`, and `calfresh-conversion-experiment` - as open-source application tooling and research code, not as an API or SDK.
-- No AsyncAPI, OpenAPI, Postman/OpenCollection, rate limit, plans/pricing, or FinOps artifacts are included in this entry because none are sourced from a real, documented surface. GetCalFresh is a free public benefit service; there is no pricing to model.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-## APIs
-
-No public APIs have been documented. GetCalFresh is a guidance and referral service, not an API provider; the underlying eligibility system of record is the state's BenefitsCal/CalSAWS platform, which itself does not publish a public developer API.
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/codeforamerica)
 - [Website](https://www.getcalfresh.org)
+- [Blog](https://www.getcalfresh.org/en/updates/)
+- [GitHub](https://github.com/codeforamerica)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 4.5** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/getcalfresh/](https://apis.io/providers/getcalfresh/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for GetCalFresh: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/getcalfresh/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
